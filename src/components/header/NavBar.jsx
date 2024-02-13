@@ -15,7 +15,7 @@ export default function NavBar() {
         </div>
 
         <div id="logo">
-            <a href="#">Baxoli Lingani</a>
+            <a href="#">Baxolise Lingani</a>
         </div>
 
         <div id="contact-links">
