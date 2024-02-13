@@ -5,6 +5,7 @@ import './components/header/NavBar.css'
 import Home from './components/HomePage/Home'
 import './components/HomePage/Home.css'
 import About from './components/AboutPage/About'
+import './components/AboutPage/About.css'
 
 
 function App() {
