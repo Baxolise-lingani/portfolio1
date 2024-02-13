@@ -10,43 +10,45 @@
 
 }
 
-:root {
-    --bg-color: #161c28;
-    --second-bg-color: #236d6c;
-    --text-color: #fff;
-    --main-color: rgb(255, 123, 0);
+span{
+    color:  rgb(241, 30, 65);
+    font-family: 'Italiana', serif;
 }
 html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #F6F5F1;
+    color: #333;
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem ;
-}
 
+section{
+    min-height: 100%;
+    padding: 10rem 9% 2rem;
+    width: 100%;
+    /* display: flex; */
+    /* margin-bottom: 100vh; */
+    
+   
+}
 
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: #F6F5F1;
+    background: var(--second-bg-color);
 
 }
 
 .about-img img {
 
-    width: 522px;
-    height: 536px;
-    bottom: 32px;
-    left: 264;
-
+    width: 35vw;
 }
 
 .heading {
