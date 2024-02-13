@@ -25,6 +25,14 @@ body {
     background-color: #F6F5F1;
     color: #333;
 }
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    width: 100%;
+    /* display: flex; */
+    
+   
+}
 /* Header styles */
 header {
     background-color: #F6F5F1;
