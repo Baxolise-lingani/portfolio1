@@ -1,0 +1,83 @@
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+span{
+    color:  rgb(241, 30, 65);
+    font-family: 'Italiana', serif;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #F6F5F1;
+    color: #333;
+}
+/* Header styles */
+header {
+    background-color: #F6F5F1;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+}
+
+.header.sticky {
+    border-bottom: 1rem solid rgba(0, 0, 0, .2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-links, #contact-links {
+    display: flex;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Italiana', serif;
+    font-size: 1.5em;
+}
+
+nav a:hover,
+nav a:active {
+    color: rgb(241, 30, 65);
+}
+
+#logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 4em;
+    font-family: 'Redressed', cursive;
+    cursor: pointer;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: #F6F5F1;
+    display: none;
+}
