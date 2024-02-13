@@ -4,6 +4,7 @@ import NavBar from './components/header/NavBar'
 import './components/header/NavBar.css'
 import Home from './components/HomePage/Home'
 import './components/HomePage/Home.css'
+import About from './components/AboutPage/About'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Home/>
+      <About/>
+      
     </>
   )
 }
