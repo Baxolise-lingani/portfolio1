@@ -1,3 +1,41 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+span{
+    color:  rgb(241, 30, 65);
+    font-family: 'Italiana', serif;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+
+section{
+    min-height: 100%;
+    padding: 10rem 9% 2rem;
+    width: 100%;
+    /* display: flex; */
+    margin-bottom: 100vh;
+    
+   
+}
 /* Home Section styles */
 .home {
     width: 100%;
@@ -9,6 +47,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .home-content{
@@ -17,7 +57,11 @@
     margin-top: 13%;
     font-family: 'Italiana',serif;
     font-size: 30px;
+    flex-direction: column;
     
+}
+.home-content h1 h2{
+left: 20px;
 }
 
 .image-container {
@@ -38,6 +82,7 @@
     bottom: 50px;
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 150px;
 }
 
 .scroll-down::before,
@@ -88,6 +133,7 @@ img {
     display: flex;
     gap: 100px;
     margin-top: 10px;/* Adjust the spacing between buttons */
+    margin-left: 80px;
 }
 
 .hireMeButton,
@@ -101,6 +147,8 @@ img {
     border-radius: 50px;
     box-shadow: 0 10px 6px -6px #000000;
     transition: background-color 0.3s ease;
+    width: 122px;
+    height: 36px;
 }
 
 .hireMeButton:hover,
