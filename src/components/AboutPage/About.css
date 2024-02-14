@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
@@ -12,7 +12,8 @@
 
 span{
     color:  rgb(241, 30, 65);
-    font-family: 'Italiana', serif;
+    font-family: 'Comic Neue',cursive serif;
+    font-size: 64px;
 }
 html {
     font-size: 62.5%;
@@ -21,7 +22,7 @@ html {
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    height: auto;
     background-color: #F6F5F1;
     color: #333;
 }
@@ -31,11 +32,12 @@ section{
     min-height: 100%;
     padding: 10rem 9% 2rem;
     width: 100%;
-    /* display: flex; */
-    /* margin-bottom: 100vh; */
+    display: flex;
+    margin-bottom: 100vh;
+    margin-top: 400px;
     
    
-}
+} */
 
 .about {
     display: flex;
@@ -47,11 +49,11 @@ section{
 }
 
 .about-img img {
-    width: 522px;
-    height: 536px;
-    bottom: 36px;
-    left: 264px;
-    border-radius: 50px;
+    width: 400px;
+    height: 417px;
+    top: 18px;
+    left: 200px;
+    border-radius: 60px;
     justify-content: space-between;
     margin-right: 5px;
     padding-left: 40px;
@@ -62,18 +64,38 @@ section{
     font-size: 4rem;
     align-items: center;
 }
-
-.heading h2{
+.heading-container{
+    align-items: center;
+    margin-bottom: 750px;
+    width: 1px;
+    height: 76px;
+    bottom: 582px;
+    right: 235px;
+    
+}
+.heading-container h2{
+    font-size: 64px;
+    font-family: 'Comic Neue', cursive;
+    /* text-align: start; */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
     text-align: center;
+    margin-left: 50Px;
+    
 }
 
-.about-content h2 {
-    /* text-align: center; */
+
+
+
+/* .about-content h2 {
+    text-align: center; 
     line-height: 1.2;
     align-items: center;
-}
+} */
 .about-content h3 {
     font-size: 2.6rem;
+    font-family: 'Comic Neue',cursive;
 }
 
 .about-content p {
@@ -85,4 +107,26 @@ section{
     right: 100px;
     margin-right: 1px;
     padding-right: 40px;
+    font-family: 'Comic Neue',cursive;
+} 
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(241, 30, 65);
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+    width: 155px;
+    height: 34px;
+    margin-left: 500px;
+
 }
+
+.btn:hover {
+    background-color: pink; 
+}
+
