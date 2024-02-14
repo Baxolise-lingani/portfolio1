@@ -15,9 +15,9 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+      {/* <NavBar/>
       <Home/>
-      <About/>
+      <About/> */}
       <Skills/>
       
     </>
