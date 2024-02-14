@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
@@ -31,16 +31,24 @@ section{
     min-height: 100%;
     padding: 10rem 9% 2rem;
     width: 100%;
-    /* display: flex; */
-    margin-bottom: 100vh;
+    
+    margin-top: 252px;
     
    
+} */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
 }
 /* Home Section styles */
 .home {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 40px;;
 
 }
 .content-container{
@@ -63,6 +71,7 @@ section{
 }
 .home-content h1 h2{
     left: 20px;
+    max-width: 600px;
 }
 
 .image-container {
@@ -72,6 +81,8 @@ section{
     bottom: 250px;
     right: 100px;
     overflow: hidden;
+    flex-shrink: 0;
+    
 }
 /* scroll down button*/
 .scroll-down{
