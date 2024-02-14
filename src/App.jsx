@@ -6,6 +6,8 @@ import Home from './components/HomePage/Home'
 import './components/HomePage/Home.css'
 import About from './components/AboutPage/About'
 import './components/AboutPage/About.css'
+import Skills from './components/SkillsPage/Skills'
+import'./components/SkillsPage/Skills.css'
 
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
   return (
     <>
       <NavBar/>
+      <Home/>
       <About/>
+      <Skills/>
       
     </>
   )
