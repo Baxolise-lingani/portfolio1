@@ -1,0 +1,80 @@
+/* TODO: syling Portfolio section */
+
+.portfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+.portfolio-nav {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.portfolio-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-nav a:hover {
+    background-color: #aaa;
+}
+
+.project-box {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover .project-details {
+    transform: translateY(0);
+}
+
+.project-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-links a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
