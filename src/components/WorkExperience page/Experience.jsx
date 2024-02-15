@@ -1,11 +1,10 @@
 export default function Experience() {
   return (
     <>
-
     <section className="experience" id="experience">
         <div className="main">
             <h3 className="head">Work Experience</h3>
-            <div className="container">
+            <div className="container-all">
                 <ul>
                     <li>
                         <h3 className="heading">Junior Data Analyst</h3>
