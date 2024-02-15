@@ -8,6 +8,10 @@ import About from './components/AboutPage/About'
 import './components/AboutPage/About.css'
 import Skills from './components/SkillsPage/Skills'
 import'./components/SkillsPage/Skills.css'
+import Experience from './components/WorkExperience page/Experience'
+import './components/WorkExperience page/Experience.css'
+
+
 
 
 function App() {
@@ -15,10 +19,11 @@ function App() {
 
   return (
     <>
-      {/* <NavBar/>
+      <NavBar/>
       <Home/>
-      <About/> */}
+      <About/>
       <Skills/>
+      <Experience/>
       
     </>
   )
