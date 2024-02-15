@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main>
+    <>
         <div className="container">
             {/* <!--Start Home Section--> */}
 
@@ -26,6 +26,6 @@ export default function Home() {
                 </div>
             </section>
         </div>
-    </main>
+    </>
   )
 }
