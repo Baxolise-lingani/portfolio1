@@ -10,6 +10,8 @@ import Skills from './components/SkillsPage/Skills'
 import'./components/SkillsPage/Skills.css'
 import Experience from './components/WorkExperience page/Experience'
 import './components/WorkExperience page/Experience.css'
+import Portfolio from './components/PortfolioPage/Portfolio'
+import './components/PortfolioPage/Portfolio.css'
 
 
 
@@ -19,11 +21,12 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+      {/* <NavBar/>
       <Home/>
       <About/>
       <Skills/>
-      <Experience/>
+      <Experience/> */}
+      <Portfolio/>
       
     </>
   )
