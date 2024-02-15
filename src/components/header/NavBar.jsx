@@ -1,4 +1,4 @@
-
+   
 export default function NavBar() {
   return (
     <div>
@@ -10,7 +10,7 @@ export default function NavBar() {
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
-                    <a href="#work-experience">Work Experience</a>
+                    <a href="#experience">Work Experience</a>
                     <a href="#portfolio">Portfolio</a>
                 </div>
 
@@ -23,7 +23,7 @@ export default function NavBar() {
                     <a href="#call">Call Me</a>
                 </div>
             </nav>
-            <i class='bx bx-menu' id="menu-icon"></i>
+            <i className='bx bx-menu' id="menu-icon"></i>
         </header>
     </div>
   )
