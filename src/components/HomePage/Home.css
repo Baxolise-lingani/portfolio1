@@ -157,6 +157,8 @@ section{
     
 }
 
+/* TODO: Fixing the Home animation */
+
 @keyframes slideInFromRight{
     0%{
         transform:translateX(100%);
