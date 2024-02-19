@@ -14,30 +14,30 @@ export default function Portfolio() {
             <div className="project-box">
                 <img src="/src/assets/images/bakery.jpg" alt="Project 1" className="project-image"/>
                 <div className="project-details">
-                    <div className="project-title">Project 1</div>
+                    <div className="project-title">Bakery</div>
                     <div className="project-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">GitHub</a>
+                        <a href="#"><i className='bx bx-link-external'></i></a>
+                        <a href="#"><i className='bx bxl-github' ></i></a>
                     </div>
                 </div>
             </div>
             <div className="project-box">
                 <img src="/src/assets/images/bank app.png" alt="Project 2" className="project-image"/>
                 <div className="project-details">
-                    <div className="project-title">Project 2</div>
+                    <div className="project-title">C Bank</div>
                     <div className="project-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">GitHub</a>
+                        <a href="#"><i className='bx bx-link-external'></i></a>
+                        <a href="#"><i class='bx bxl-github' ></i></a>
                     </div>
                 </div>
             </div>
             <div className="project-box">
                 <img src="/src/assets/images/Personal website.jpg" alt="Project 3" className="project-image"/>
                 <div className="project-details">
-                    <div className="project-title">Project 3</div>
+                    <div className="project-title">Personal Website</div>
                     <div className="project-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">GitHub</a>
+                        <a href="#"><i className='bx bx-link-external'></i></a>
+                        <a href="#"><i className='bx bxl-github' ></i></a>
                     </div>
                 </div>
             </div>
