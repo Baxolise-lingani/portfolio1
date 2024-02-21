@@ -70,6 +70,7 @@ section{
     font-size: 35px;
     flex-direction: column;
     max-width: 600px;
+    animation: slideInFromLeft 1s ease-out;
     
     
 }
@@ -206,3 +207,42 @@ img {
     background-color: pink;
 }
 
+@media screen and (max-width: 768px) {
+   .content-container{
+    flex-direction: column-reverse;
+    padding: 10px;
+   } 
+   .home-content{
+    margin-top: 0;
+    text-align: center;
+   }
+   .image-container{
+    position: static;
+    margin-top: 20px;
+    height: 500px;
+    margin-left: -68px;
+
+   }
+   .scroll-down{
+    display: none;
+   }
+   .buttons{
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+   }
+   .hireMeButton,
+   .portfolioButton{
+    width: 100%;
+   }
+}
+
+@media screen and (max-width:480px) {
+    .home{
+        padding: 20px;
+    }
+    .home-content h1,
+    .home-content h2{
+        font-size: 28px;
+    }
+}
