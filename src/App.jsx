@@ -16,6 +16,9 @@ import Form from './components/FormPage/Form'
 import './components/FormPage/Form.css'
 import Footer from './components/FooterPage/Footer'
 import './components/FooterPage/Footer.css'
+import bakeryImage from './assets/images/bakery.jpg'
+import bankAppImage from './assets/images/bank app.png'
+import personalWebsiteImage from './assets/images/Personal website.jpg'
 
 
 
