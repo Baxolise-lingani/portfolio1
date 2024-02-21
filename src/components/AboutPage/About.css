@@ -76,7 +76,6 @@ section{
 .heading-container h2{
     font-size: 64px;
     font-family: 'Comic Neue', cursive;
-    /* text-align: start; */
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -129,4 +128,7 @@ section{
 .btn:hover {
     background-color: pink; 
 }
+
+
+  
 
