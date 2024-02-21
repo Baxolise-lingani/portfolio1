@@ -1,11 +1,12 @@
 // TODO: focusing on Portfolio section
+
 export default function Portfolio() {
   return (
     <>
      <section className="portfolio" id="portfolio">
         <h3 className="head">Previous <span>Project</span></h3>
         <div className="portfolio-nav">
-            <a href="#">All</a>
+            <a href="#portfolio">All</a>
             <a href="#">Website</a>
             <a href="#">Application</a>
             <a href="#">Personal Website</a>
