@@ -1,3 +1,6 @@
+// TODO: adding firebase as my backend
+
+
 import React, { useState } from 'react';
 import * as validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
