@@ -19,7 +19,7 @@ export default function NavBar() {
                 </div>
 
                 <div id="contact-links">
-                    <a href="#message">Message</a>
+                    <a href="#contact">Message</a>
                     <a href="#call">Call Me</a>
                 </div>
             </nav>

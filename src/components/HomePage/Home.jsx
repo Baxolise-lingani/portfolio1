@@ -12,8 +12,8 @@ export default function Home() {
                         <p>I'm a <span>Juniour Software Developer</span></p>
             
                         <div className="buttons">
-                            <button className="hireMeButton">Hire Me</button>
-                            <button className="portfolioButton">Portfolio</button>
+                           <a href="/src/assets/Resume/B_Lingani_CapaCiti Resume .docx"><button className="hireMeButton">Hire Me</button></a> 
+                            <a href="#portfolio"><button className="portfolioButton">Portfolio</button></a>
                         </div>
                         <a href="#about">
                             <div className="scroll-down"></div>

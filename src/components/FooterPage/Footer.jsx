@@ -22,10 +22,10 @@ export default function Footer() {
 
                 <div className="box">
                     <h3>contact Me</h3>
-                    <a href="#"><i className='bx bxl-whatsapp'></i></a>
+                    <a href="https://faq.whatsapp.com/820124435853543/"><i className='bx bxl-whatsapp'></i></a>
                     <a href="#"><i className='bx bxl-instagram' ></i></a>
-                    <a href="#"><i className='bx bxl-linkedin' ></i></a>
-                    <a href="#"><i className='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/baxolise-lingani"><i className='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/Baxolise-lingani"><i className='bx bxl-github' ></i></a>
                 </div>
 
             </div>

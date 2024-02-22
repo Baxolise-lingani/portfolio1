@@ -82,6 +82,38 @@ export default function Form() {
     } else {
       setErrors(validationErrors);
     }
+
+    const handleSubmit = async(event) => {
+      event.preventDefault();
+
+      //Validate form fiels
+
+      if (Object.keys(validationErrors).length === 0) {
+        try{
+          const response = await fetch(
+            'https://portfolio-2ff8e.cloudfunctions.net/sendEmail',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+
+          if (response.ok) {
+            console.log('Form Submitted successfully:', formDate);
+          } else{
+            console.error('Failed to submit form:', response.statusText);
+          }
+        
+        } catch (error) {
+          console.error('Error Submitting form', error);
+        }
+      } else {
+        setErrors(validationErrors);
+      }
+    }
   };
 
   return (

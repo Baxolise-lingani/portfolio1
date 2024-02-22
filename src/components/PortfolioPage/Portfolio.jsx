@@ -1,51 +1,95 @@
-// TODO: focusing on Portfolio section
+import React, { useState } from 'react';
 
 export default function Portfolio() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const projects = [
+    {
+      title: 'Bakery',
+      category: 'website',
+      image: '/src/assets/images/bakery.jpg',
+      links: {
+        external: '#',
+        github: '#',
+      },
+    },
+    {
+      title: 'C Bank',
+      category: 'application',
+      image: '/src/assets/images/bank app.png',
+      links: {
+        external: '#',
+        github: '#',
+      },
+    },
+    {
+      title: 'Personal Website',
+      category: 'personal-website',
+      image: '/src/assets/images/Personal website.jpg',
+      links: {
+        external: '#',
+        github: '#',
+      },
+    },
+  ];
+
+  const filteredProjects =
+    selectedCategory === 'all'
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
+  const containerStyles =
+      selectedCategory !== 'all'
+        ? {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }
+        : {};
+
   return (
     <>
-     <section className="portfolio" id="portfolio">
-        <h3 className="head">Previous <span>Project</span></h3>
+      <section className="portfolio" id="portfolio">
+        <h3 className="head">
+          Previous <span>Project</span>
+        </h3>
         <div className="portfolio-nav">
-            <a href="#portfolio">All</a>
-            <a href="#">Website</a>
-            <a href="#">Application</a>
-            <a href="#">Personal Website</a>
+          <a href="#portfolio" onClick={() => setSelectedCategory('all')} active>
+            All
+          </a>
+          <a href="#portfolio" onClick={() => setSelectedCategory('website')}>
+            Website
+          </a>
+          <a href="#portfolio" onClick={() => setSelectedCategory('application')}>
+            Application
+          </a>
+          <a href="#portfolio" onClick={() => setSelectedCategory('personal-website')}>
+            Personal Website
+          </a>
         </div>
-        <div className="project-container">
-            <div className="project-box">
-                <img src="/src/assets/images/bakery.jpg" alt="Project 1" className="project-image"/>
-                <div className="project-details">
-                    <div className="project-title">Bakery</div>
-                    <div className="project-links">
-                        <a href="#"><i className='bx bx-link-external'></i></a>
-                        <a href="#"><i className='bx bxl-github' ></i></a>
-                    </div>
+        <div className="project-container" style={containerStyles}>
+          {filteredProjects.map((project, index) => (
+            <div className="project-box" key={index}>
+              <img
+                src={project.image}
+                alt={`Project ${index + 1}`}
+                className="project-image"
+              />
+              <div className="project-details">
+                <div className="project-title">{project.title}</div>
+                <div className="project-links">
+                  <a href={project.links.external}>
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                  <a href={project.links.github}>
+                    <i className="bx bxl-github"></i>
+                  </a>
                 </div>
+              </div>
             </div>
-            <div className="project-box">
-                <img src="/src/assets/images/bank app.png" alt="Project 2" className="project-image"/>
-                <div className="project-details">
-                    <div className="project-title">C Bank</div>
-                    <div className="project-links">
-                        <a href="#"><i className='bx bx-link-external'></i></a>
-                        <a href="#"><i class='bx bxl-github' ></i></a>
-                    </div>
-                </div>
-            </div>
-            <div className="project-box">
-                <img src="/src/assets/images/Personal website.jpg" alt="Project 3" className="project-image"/>
-                <div className="project-details">
-                    <div className="project-title">Personal Website</div>
-                    <div className="project-links">
-                        <a href="#"><i className='bx bx-link-external'></i></a>
-                        <a href="#"><i className='bx bxl-github' ></i></a>
-                    </div>
-                </div>
-            </div>
+          ))}
         </div>
-       
-    </section>
-
+      </section>
     </>
-  )
+  );
 }
