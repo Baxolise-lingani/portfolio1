@@ -2,16 +2,16 @@
 export default function Skills() {
   return (
     <section className="skills" id="skills">
+        <div className="header-container">
+              <h2 className="section-heading">Skills</h2>
+        </div>
       <div className="container">
         <div className="skills-content">
+          
           <div className="skills-img">
             <img src="/src/assets/images/Skills-removebg-preview.png" alt="Skills Image" />
           </div>
-          
           <div className="skills-details">
-            <div className="header-container">
-              <h2 className="section-heading">Skills</h2>
-            </div>
             <div className="skill-item">
               <h3>HTML-85%</h3>
               <div className="progress-bar-container">
