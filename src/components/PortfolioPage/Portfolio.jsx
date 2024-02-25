@@ -9,8 +9,8 @@ export default function Portfolio() {
       category: 'website',
       image: '/src/assets/images/bakery.jpg',
       links: {
-        external: '#',
-        github: '#',
+        external: 'https://stupendous-peony-023e04.netlify.app',
+        github: 'https://github.com/Baxolise-lingani/Snesh-s-Bakery',
       },
     },
     {
@@ -18,8 +18,7 @@ export default function Portfolio() {
       category: 'application',
       image: '/src/assets/images/bank app.png',
       links: {
-        external: '#',
-        github: '#',
+        github: 'https://github.com/Baxolise-lingani/bank-app',
       },
     },
     {
@@ -27,8 +26,8 @@ export default function Portfolio() {
       category: 'personal-website',
       image: '/src/assets/images/Personal website.jpg',
       links: {
-        external: '#',
-        github: '#',
+        external: 'https://cozy-khapse-b3af1e.netlify.app',
+        github: 'https://github.com/Baxolise-lingani/Personal-portfolio',
       },
     },
   ];
