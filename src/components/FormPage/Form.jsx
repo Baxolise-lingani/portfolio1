@@ -1,121 +1,118 @@
 // TODO: adding firebase as my backend
 
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import * as validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from 'emailjs-com';
 
 //'Y6LevMnspAAAAAIY7MkzL9m9TY_IbVXjGrjEb_RUn'
 
 export default function Form() {
-  const [formData, setFormData] = useState({
+  
+  const formRef = useRef();
+  const [form, setForm] = useState({
     fullName: '',
     emailAddress: '',
     phoneNumber: '',
     emailSubject: '',
     message: '',
   });
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [recaptchaValue, setRecaptchaValue] = useState(null);
 
-  const handleChange = (event) => {
-    const { id, value } = event.target;
-
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [id]: value,
-    }));
-
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [id]: '', // Clear the specific error for the current input
-    }));
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setForm({ ...form, [id]: value });
   };
 
   const handleRecaptchaChange = (value) => {
     setRecaptchaValue(value);
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      recaptcha: '', // Clear the reCAPTCHA error
-    }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    // Validate form fields
     const validationErrors = {};
 
-    // Full Name validation
-    if (!formData.fullName.trim()) {
+    if (!form.fullName.trim()) {
       validationErrors.fullName = 'Full name is required';
     }
 
-    // Email Address validation
-    if (!validator.isEmail(formData.emailAddress)) {
+    if (!validator.isEmail(form.emailAddress)) {
       validationErrors.emailAddress = 'Please enter a valid email address';
     }
 
-    // Phone Number validation
-    if (!validator.isMobilePhone(formData.phoneNumber, 'any', { strictMode: false })) {
+    if (!validator.isMobilePhone(form.phoneNumber, 'any', { strictMode: false })) {
       validationErrors.phoneNumber = 'Please enter a valid phone number';
     }
 
-    // Email Subject validation
-    if (!formData.emailSubject.trim()) {
+    if (!form.emailSubject.trim()) {
       validationErrors.emailSubject = 'Subject is required';
     }
 
-    // Message validation
-    if (!formData.message.trim()) {
+    if (!form.message.trim()) {
       validationErrors.message = 'Message is required';
     }
 
-    // reCAPTCHA validation
     if (!recaptchaValue) {
       validationErrors.recaptcha = 'Please complete the reCAPTCHA';
     }
 
     if (Object.keys(validationErrors).length === 0) {
-      // Handle successful form submission (e.g., send email)
-      console.log('Form submitted successfully:', formData);
-    } else {
-      setErrors(validationErrors);
-    }
+      try {
+        setLoading(true);
 
-    const handleSubmit = async(event) => {
-      event.preventDefault();
+        console.log('Sending email...');
 
-      //Validate form fiels
-
-      if (Object.keys(validationErrors).length === 0) {
-        try{
-          const response = await fetch(
-            'https://portfolio-2ff8e.cloudfunctions.net/sendEmail',
+        // Use Email.js to send the email
+        await emailjs 
+        .send(
+            'sservice_qooifte', // Your Email.js service ID
+            'template_123tdng', // Your Email.js template ID
             {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formData),
+              from_fullName: form.fullName,
+              to_fullName: 'Baxolise Lingani',
+              from_emailAddress: form.emailAddress,
+              to_emailAddress: 'baxoliselingani22@gmail.com', // Recipient's email address
+              phoneNumber: form.phoneNumber,
+              emailSubject: form.emailSubject,
+              message: form.message,
+            },
+            'mA9CDDXbQC9tDPKB3' // Your Email.js user ID
+          )
+          .then(
+            () => {
+              setLoading(false);
+              alert('Thank you. I will get back to you as soon as possible.');
+
+              setForm({
+                fullName: '',
+                emailAddress: '',
+                phoneNumber: '',
+                emailSubject: '',
+                message: '',
+              });
+            },
+            (error) => {
+              setLoading(false);
+              console.log(error);
+              alert('Something went wrong. Please try again.');
             }
           );
 
-          if (response.ok) {
-            console.log('Form Submitted successfully:', formDate);
-          } else{
-            console.error('Failed to submit form:', response.statusText);
-          }
-        
-        } catch (error) {
-          console.error('Error Submitting form', error);
-        }
-      } else {
-        setErrors(validationErrors);
+          console.log('Email sent successfully!');
+           
+      } catch (error) {
+        setLoading(false);
+        console.error('Error submitting form:', error);
+        alert('Something went wrong. Please try again.');
       }
+    } else {
+      setErrors(validationErrors);
     }
-  };
-
+  };    
   return (
     <section className="contact" id="contact">
       <h2 className="heading">Let's Work <span>Together</span></h2>
@@ -126,7 +123,7 @@ export default function Form() {
             <input
               type="text"
               id="fullName"
-              value={formData.fullName}
+              value={form.fullName}
               onChange={handleChange}
               placeholder="Full Name"
               className={`input ${errors.fullName ? 'error' : ''}`}
@@ -138,7 +135,7 @@ export default function Form() {
             <input
               type="email"
               id="emailAddress"
-              value={formData.emailAddress}
+              value={form.emailAddress}
               onChange={handleChange}
               placeholder="Email Address"
               className={`input ${errors.emailAddress ? 'error' : ''}`}
@@ -150,7 +147,7 @@ export default function Form() {
             <input
               type="tel"
               id="phoneNumber"
-              value={formData.phoneNumber}
+              value={form.phoneNumber}
               onChange={handleChange}
               placeholder="Phone Number"
               className={`input ${errors.phoneNumber ? 'error' : ''}`}
@@ -162,7 +159,7 @@ export default function Form() {
             <input
               type="text"
               id="emailSubject"
-              value={formData.emailSubject}
+              value={form.emailSubject}
               onChange={handleChange}
               placeholder="Email Subject"
               className={`input ${errors.emailSubject ? 'error' : ''}`}
@@ -175,7 +172,7 @@ export default function Form() {
               id="message"
               cols={30}
               rows={10}
-              value={formData.message}
+              value={form.message}
               onChange={handleChange}
               placeholder="Your Message"
               className={`input ${errors.message ? 'error' : ''}`}
@@ -195,3 +192,4 @@ export default function Form() {
     </section>
   );
 }
+

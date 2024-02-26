@@ -8,9 +8,7 @@ import Experience from './components/WorkExperience page/Experience'
 import Portfolio from './components/PortfolioPage/Portfolio'
 import Form from './components/FormPage/Form'
 import Footer from './components/FooterPage/Footer'
-import bakeryImage from './assets/images/bakery.jpg'
-import bankAppImage from './assets/images/bank app.png'
-import personalWebsiteImage from './assets/images/Personal website.jpg'
+
 
 
 
