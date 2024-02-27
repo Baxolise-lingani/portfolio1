@@ -8,6 +8,7 @@ import Experience from './components/WorkExperience page/Experience'
 import Portfolio from './components/PortfolioPage/Portfolio'
 import Form from './components/FormPage/Form'
 import Footer from './components/FooterPage/Footer'
+import Navigation from './components/Navigation/Navigation'
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Portfolio/>
       <Form/>
       <Footer/>
+      <Navigation/>
 
     </>
   )

@@ -9,7 +9,7 @@ export default function Skills() {
         <div className="skills-content">
           
           <div className="skills-img">
-            <img src="/src/assets/images/Skills-removebg-preview.png" alt="Skills Image" />
+            <img src="./src/assets/Images/Skills-removebg-preview.png" alt="Skills Image" />
           </div>
           <div className="skills-details">
             <div className="skill-item">
