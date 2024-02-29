@@ -30,12 +30,13 @@ export default function NavBar() {
                     <a href="#call">Call Me</a>
                 </div>
 
-                <i className='bx bx-menu' id="menu-icon" onClick={toggleMobileMenu}></i>
+                <a href="#" className='menu-button' onclick={showSidebar()}><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a>
             </nav>
           
 
             {/* Mobile Menu */}
-          <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`}>
+          <div className="sidebar">
+            <a href="#" onClick={hideSidebar()}><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
