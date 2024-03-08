@@ -15,8 +15,6 @@ import Footer from './components/FooterPage/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <NavBar/>

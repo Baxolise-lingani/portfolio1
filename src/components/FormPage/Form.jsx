@@ -6,7 +6,7 @@ import * as validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from 'emailjs-com';
 
-//'Y6LevMnspAAAAAIY7MkzL9m9TY_IbVXjGrjEb_RUn'
+
 
 export default function Form() {
   
@@ -63,47 +63,34 @@ export default function Form() {
     if (Object.keys(validationErrors).length === 0) {
       try {
         setLoading(true);
-
         console.log('Sending email...');
 
         // Use Email.js to send the email
-        await emailjs 
-        .send(
-            'sservice_qooifte', // Your Email.js service ID
-            'template_123tdng', // Your Email.js template ID
-            {
-              from_fullName: form.fullName,
-              to_fullName: 'Baxolise Lingani',
-              from_emailAddress: form.emailAddress,
-              to_emailAddress: 'baxoliselingani22@gmail.com', // Recipient's email address
-              phoneNumber: form.phoneNumber,
-              emailSubject: form.emailSubject,
-              message: form.message,
-            },
-            'mA9CDDXbQC9tDPKB3' // Your Email.js user ID
-          )
-          .then(
-            () => {
-              setLoading(false);
-              alert('Thank you. I will get back to you as soon as possible.');
+        await emailjs.send(
+          'service_qooifte', // Your Email.js service ID
+          'template_123tdng', // Your Email.js template ID
+          {
+            from_fullName: form.fullName,
+            to_fullName: 'Baxolise Lingani',
+            from_emailAddress: form.emailAddress,
+            to_emailAddress: 'baxoliselingani22@gmail.com', // Recipient's email address
+            phoneNumber: form.phoneNumber,
+            emailSubject: form.emailSubject,
+            message: form.message,
+          },
+          'mA9CDDXbQC9tDPKB3' // Your Email.js user ID
+        );
 
-              setForm({
-                fullName: '',
-                emailAddress: '',
-                phoneNumber: '',
-                emailSubject: '',
-                message: '',
-              });
-            },
-            (error) => {
-              setLoading(false);
-              console.log(error);
-              alert('Something went wrong. Please try again.');
-            }
-          );
+        setLoading(false);
+        alert('Thank you. I will get back to you as soon as possible.');
 
-          console.log('Email sent successfully!');
-           
+        setForm({
+          fullName: '',
+          emailAddress: '',
+          phoneNumber: '',
+          emailSubject: '',
+          message: '',
+        });
       } catch (error) {
         setLoading(false);
         console.error('Error submitting form:', error);
@@ -112,7 +99,7 @@ export default function Form() {
     } else {
       setErrors(validationErrors);
     }
-  };    
+  };
   return (
     <section className="contact" id="contact">
       <h2 className="heading">Let's Work <span>Together</span></h2>
