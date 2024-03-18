@@ -102,7 +102,6 @@ nav{
     nav .menu-btn i{
       display: block;
       color: #111;
-      margin-right: 9rem;
       
      
     }
@@ -587,7 +586,7 @@ img {
     }
     .section-heading {
         font-size: 4rem;
-        padding-left: 24rem;
+        padding-left: 11rem;
     }
 
     .skills-details{
