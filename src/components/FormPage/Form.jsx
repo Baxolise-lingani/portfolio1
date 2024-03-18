@@ -67,8 +67,8 @@ export default function Form() {
 
         // Use Email.js to send the email
         await emailjs.send(
-          'service_qooifte', // Your Email.js service ID
-          'template_123tdng', // Your Email.js template ID
+          'service_nx34gvq', // Your Email.js service ID
+          'template_ngap17n', // Your Email.js template ID
           {
             from_fullName: form.fullName,
             to_fullName: 'Baxolise Lingani',
@@ -78,7 +78,7 @@ export default function Form() {
             emailSubject: form.emailSubject,
             message: form.message,
           },
-          'mA9CDDXbQC9tDPKB3' // Your Email.js user ID
+          '-PYCbJJd8pm4T5ZIp' // Your Email.js user ID
         );
 
         setLoading(false);
