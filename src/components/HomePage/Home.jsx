@@ -21,7 +21,7 @@ export default function Home() {
                     </div>
     
                     <div className="image-container">
-                        <img src="/src/assets/home_image-removebg-preview.png" alt="Home Image"/>
+                        <img src="/images/home_image-removebg-preview.png" alt="Home Image"/>
                     </div>
                 </div>
             </section>
