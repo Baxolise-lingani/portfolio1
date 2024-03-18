@@ -6,7 +6,7 @@ export default function About() {
           <h2 className="heading">About <span>Me</span></h2>
         </div>
         <div className="about-img">
-          <img src="./src/assets/Images/About.jpg" alt=""/>
+          <img src="/src/assets/About.jpg" alt=""/>
         </div>
         
         <div className="about-content">
