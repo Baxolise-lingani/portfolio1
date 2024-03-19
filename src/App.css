@@ -40,6 +40,7 @@ section{
 /* src/App.css */
 nav{
     display: flex;
+    position: fixed;
     height: 80px;
     width: 100%;
     background: #F6F5F1;
@@ -147,48 +148,36 @@ nav{
 
 /* Home styling */
 
-.home {
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px;
-
+.home-content-wrapper {
+   display: flex;
+   justify-content: space-between;
 }
+
 .content-container{
-    display: flex;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row-reverse;
     padding: 20px;
 }
 
 .home-content{
-    /* TODO:fixing the content-container */
-    /* margin-left: 8%; */
-    margin-right: 10%;
-    margin-top: 25%;
+    margin-top: 70px;
     font-family: 'Italiana',serif;
     font-size: 35px;
-    flex-direction: column;
     max-width: 600px;
-    animation: slideInFromLeft 1s ease-out;
-    
-    
+    animation: slideInFromLeft 1s ease-out;  
 }
-.home-content h1 h2{
+/* .home-content h1 h2{
     left: 20px;
     max-width: 600px;
-}
+} */
 
 .image-container {
-    width: 473px;
-    height: 600px;
-    position: absolute;
-    bottom: 91px;
-    right: 100px;
-    overflow: hidden;
-    flex-shrink: 0;
+    width: 100%;
+    max-width: 500px;
+    padding-bottom: 12rem;
     animation: slideInFromRight 1s ease-out;
-    
 }
 /* scroll down button*/
 .scroll-down{
@@ -200,7 +189,7 @@ nav{
     bottom: 20px;
     border-radius: 50px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 0rem;
 }
 
 .scroll-down::before,
@@ -280,10 +269,8 @@ img {
 
 .buttons {
     display: flex;
-    gap: 120px;
-    margin-top: 20px;/* Adjust the spacing between buttons */
-    margin-left: 8px;
-    
+    gap: 100px;
+    margin-top: 20px;  
 }
 
 .hireMeButton,
@@ -298,7 +285,6 @@ img {
     box-shadow: 0 10px 6px -6px #000000;
     transition: background-color 0.3s ease;
     width: 122px;
-    height: 36px;
     animation: slideInFromLeft 1s ease-out;
 }
 
