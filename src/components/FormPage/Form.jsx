@@ -39,7 +39,29 @@ export default function Form() {
 
     const validationErrors = {};
 
-    // Validation code remains unchanged...
+    if (!form.fullName.trim()) {
+      validationErrors.fullName = 'Full name is required';
+    }
+
+    if (!validator.isEmail(form.emailAddress)) {
+      validationErrors.emailAddress = 'Please enter a valid email address';
+    }
+
+    if (!validator.isMobilePhone(form.phoneNumber, 'any', { strictMode: false })) {
+      validationErrors.phoneNumber = 'Please enter a valid phone number';
+    }
+
+    if (!form.emailSubject.trim()) {
+      validationErrors.emailSubject = 'Subject is required';
+    }
+
+    if (!form.message.trim()) {
+      validationErrors.message = 'Message is required';
+    }
+
+    if (!recaptchaValue) {
+      validationErrors.recaptcha = 'Please complete the reCAPTCHA';
+    }
 
     if (Object.keys(validationErrors).length === 0) {
       try {
@@ -147,7 +169,7 @@ export default function Form() {
           </div>
           <div className="input-box">
             <ReCAPTCHA
-              sitekey="6LevMnspAAAAAIY7MkzL9m9TY_IbVXjGrjEb_RUn"
+              sitekey="6LcUT54pAAAAAHkgWK4W6mo6nbUO5lwwZ0KtrdrB"
               onChange={handleRecaptchaChange}
             />
             {errors.recaptcha && <p className="error-message">{errors.recaptcha}</p>}
