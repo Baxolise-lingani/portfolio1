@@ -294,21 +294,19 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-   .content-container{
-    flex-direction: column-reverse;
-    padding: 10px;
+   .home-content-wrapper{
+    flex-direction: column;
    } 
+   
    .home-content{
     margin-top: 155px;
     text-align: center;
    }
-   .image-container{
-    position: static;
+   .image-container {
+    order: 1;
     margin-top: 20px;
-    height: 500px;
-    margin-left: -68px;
-
-   }
+    height: auto;
+  }
    .scroll-down{
     display: none;
    }
