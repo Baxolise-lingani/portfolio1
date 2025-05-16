@@ -30,6 +30,24 @@ export default function Portfolio() {
         github: 'https://github.com/Baxolise-lingani/Personal-portfolio',
       },
     },
+    {
+      title: 'Joke App',
+      category: 'application',
+      image: '/workspaces/portfolio1/public/images/joke.jpeg',
+      links: {
+        
+        github: 'https://github.com/Baxolise-lingani/Jokes-App',
+      },
+    },
+    {
+      title: 'Simon Game',
+      category: 'application', 
+      image: '/workspaces/portfolio1/public/images/simongame.jpeg', 
+      links: {
+     		github: 'https://github.com/Baxolise-lingani/Simon-game-challeng', 
+      }, 
+      
+    }, 
   ];
 
   const filteredProjects =
