@@ -33,7 +33,7 @@ export default function Portfolio() {
     {
       title: 'Joke App',
       category: 'application',
-      image: '/workspaces/portfolio1/public/images/joke.jpeg',
+      image: '/images/joke.jpeg',
       links: {
         
         github: 'https://github.com/Baxolise-lingani/Jokes-App',
@@ -42,7 +42,7 @@ export default function Portfolio() {
     {
       title: 'Simon Game',
       category: 'application', 
-      image: '/workspaces/portfolio1/public/images/simongame.jpeg', 
+      image: '/images/simongame.jpeg', 
       links: {
      		github: 'https://github.com/Baxolise-lingani/Simon-game-challeng', 
       }, 
